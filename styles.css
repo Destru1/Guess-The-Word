@@ -43,6 +43,7 @@ h2{
 .key.large{
     grid-column: span 3;
 }
+
 .key:hover, .key:focus{
     --lightness-offset:10%;
 }
@@ -91,14 +92,14 @@ h2{
 }
 
 .tile[data-state="wrong"]{
-    border-color: hsl(240, 2%, 23%);
+    background-color: hsl(240, 2%, 23%);
 }
 
 .tile[data-state="wrong-location"]{
-    border-color: hsl(49, 51%, 47%);
+    background-color: hsl(49, 51%, 47%);
 }
 .tile[data-state="correct"]{
-    border-color: hsl(115, 29%, 43%);
+    background-color: hsl(115, 29%, 43%);
 }
 
 .tile.shake{

@@ -15295,7 +15295,7 @@ const dictionary = [
 const keyboard = document.querySelector("[data-keyboard]")
 const alertContainer = document.querySelector("[data-alert-container]")
 const guessGrid = document.querySelector("[data-guess-grid]")
-const targetWord = targetWords[Math.floor(randomNumber(1,2316))]
+const targetWord = targetWords[Math.floor(randomNumber(1,2315))]
 
 function randomNumber(min,max){
     return Math.floor(Math.random()* (max - min + 1) + min)
@@ -15325,7 +15325,7 @@ if(e.target.matches("[data-enter]")){
     return
 }
 
-if(e.target.matches(["data-delete"])){
+if(e.target.matches("[data-delete]")){
     deleteKey()
     return
 }
@@ -15453,8 +15453,8 @@ if(guess === targetWord){
 }
 
 const remainingTiles = guessGrid.querySelectorAll(":not([data-letter])")
-if(remainingTiles === 0){
-    showAlert(targetWord.toUpperCase(),null)
+if(remainingTiles.length === 0){
+    showAlert(targetWord.toUpperCase(), null)
     stopGame()
  }
 }
